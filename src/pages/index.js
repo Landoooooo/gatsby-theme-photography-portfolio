@@ -12,6 +12,10 @@ const StyledLink = styled(Link)`
   width: 33%;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `
 
 const Index = () => {
