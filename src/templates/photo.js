@@ -43,11 +43,16 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
+  height: 100vh;
 `
 const PhotoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100vh;
   width: 75%;
   img {
-    height: 99.9vh;
+    height: auto;
+    max-height: 100vh;
     width: 100%;
     margin-bottom: 0;
   }
@@ -55,9 +60,10 @@ const PhotoContainer = styled.div`
 
 const Arrows = styled.div`
   position: absolute;
-  top: 35vh;
+  top: 45vh;
 
-  right: ${props => (props.right ? "10px" : null)};
+  right: ${props => (props.right ? "-6px" : "null")};
+  left: ${props => (props.left ? "-6px" : "null")};
 `
 
 const Icons = styled.div`
@@ -89,7 +95,7 @@ const Photo = props => {
           <FaPlay />
           <span>{`${position} / ${total}`}</span>
         </Icons>
-        <Arrows>
+        <Arrows left>
           <StyledLink
             to={prev !== null ? `/gallery/${prev}` : `/gallery/${slug}`}
           >
