@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <Container>
       <HeaderLink to="/">
-        <h1>Devon Battle</h1>
+        <h1>DCWB Productions</h1>
       </HeaderLink>
       <Nav>
         <ul>
